@@ -1,0 +1,72 @@
+{template '_header'}
+
+
+
+<link href="../addons/ewei_shopv2/plugin/app/static/css/poster.css?v=20171031" rel="stylesheet" type="text/css"/>
+
+
+
+<div class="page-header">
+
+    当前位置：
+
+    <span class="text-primary">分销海报</span>
+
+</div>
+
+
+
+<div class="page-content">
+
+    <form action="./index.php">
+
+        <input type="hidden" name="c" value="site" />
+
+        <input type="hidden" name="a" value="entry" />
+
+        <input type="hidden" name="m" value="ewei_shopv2" />
+
+        <input type="hidden" name="do" value="web" />
+
+        <input type="hidden" name="r" value="app.poster" />
+
+
+
+        <div class="page-toolbar">
+
+            {ifp 'app.poster.add'}
+
+            <div class="col-sm-4">
+
+                <a class="btn btn-primary btn-sm" ><i class="fa fa-plus"></i> 分销海报设置请点击右上角的“体验新版”，切换到新版进行设置</a>
+
+              
+            </div>
+
+            {/if}
+
+
+
+
+        </div>
+
+    </form>
+</div>
+
+
+
+<script language="javascript">
+
+    myrequire(['../../plugin/app/static/js/poster','web/biz'],function(modal){
+
+        modal.initList();
+
+    });
+
+</script>
+
+
+
+{template '_footer'}
+
+<!--weichengtech54mI5p2D5omA5pyJ-->

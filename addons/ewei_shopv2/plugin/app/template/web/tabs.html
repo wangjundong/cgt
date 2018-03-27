@@ -1,0 +1,49 @@
+<ul class="menu-head-top">
+    <li {if $_GPC['r']=='app'}class="active"{/if}><a href="{php echo webUrl('app')}">{php echo m('plugin')->getName('app')} <i class="fa fa-caret-right"></i></a></li>
+</ul>
+
+<div class='menu-header'>首页设置</div>
+<ul>
+    {ifp 'app.page'}
+        <li {if $_W['controller']=='page'}class="active"{/if}>
+            <a href="{php echo webUrl('app/page')}">页面设计</a>
+        </li>
+    {/if}
+    <li {if $_W['controller']=='goods'}class="active"{/if}>
+        <a href="{php echo webUrl('app/goods')}">商品二维码</a>
+    </li>
+    {ifp 'app.tabbar'}
+        <li {if $_W['controller']=='tabbar'}class="active"{/if}>
+            <a href="{php echo webUrl('app/tabbar')}">底部导航</a>
+        </li>
+    {/if}
+    {ifp 'app.setting'}
+        <li {if $_W['controller']=='setting'}class="active"{/if}>
+            <a href="{php echo webUrl('app/setting')}">小程序设置</a>
+        </li>
+    {/if}
+    {ifp 'app.release'}
+        <li {if $_W['controller']=='release'}class="active"{/if}>
+            <a href="{php echo webUrl('app/release')}">发布与审核</a>
+        </li>
+    {/if}
+  
+  <li >
+            <a href="{php echo webUrl('app/startadv')}">启动广告</a>
+        </li>
+		
+		
+   <li >
+            <a href="{php echo webUrl('app/poster')}">分销海报</a>
+        </li>
+  
+</ul>
+
+{ifp 'app.setting|app.pay'}
+    <div class='menu-header'>其他设置</div>
+    <ul>
+        {ifp 'app.tmessage'}
+            <li {if $_W['routes']=='app.tmessage'}class="active"{/if}><a href="{php echo webUrl('app/tmessage')}">消息模板</a></li>
+        {/if}
+    </ul>
+{/if}
